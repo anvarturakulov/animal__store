@@ -140,10 +140,15 @@ li {
   cursor: pointer;
 }
 
-.price__arrow{
+.price__arrow,
+.old__arrow{
   width: 15px;
   height: 9px;
   margin-left: 14px;
+}
+
+.up{
+  transform : rotate(180deg)
 }
 
 .old__sortbox{
@@ -161,14 +166,16 @@ li {
     width: 100%;
     height: auto;
   }
+  .animal__sale-heart{
+    position: absolute;
+    top: 37px;
+    right: 32px;
+    width: 46px;
+    height: 40px;
+    cursor: pointer;
+  }  
   position: relative;
 
-}
-
-.animal__sale-heart{
-  position: absolute;
-  top: 37px;
-  right: 32px;
 }
 
 .animal__sale{
@@ -260,6 +267,7 @@ li {
   text-align: center;
   margin: 0 auto;
   cursor: pointer;
+  display: none;
 }
 
 .top__button-box{
@@ -268,17 +276,20 @@ li {
 }
 
 .top__button{
-  position: absolute;
-  top: -10px;
-  right: 0px;
+  position: fixed;
+  display: none;
+  bottom: 100px;
+  right: 100px;
   margin: 0 auto;
   width: 59px;
   height: 59px;
   background: #6EBBD3;
   padding: 23px 20px;
+  cursor: pointer;
   svg{
     fill : #fff;
   }
+  z-index: 100;
 }
 
 .footer__inner{
@@ -363,6 +374,10 @@ li {
 
 .show{
   display: block;
+}
+
+.bg-black{
+  background-color: #000;
 }
 
 @import 'utils/media';
